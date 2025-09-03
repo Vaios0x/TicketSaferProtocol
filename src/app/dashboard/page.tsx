@@ -116,13 +116,13 @@ export default function DashboardPage() {
               className="relative mb-8 sm:mb-12"
             >
               <div className="glassmorphism-neural rounded-3xl p-4 sm:p-6 lg:p-8 border border-cyan-400/20 shadow-2xl shadow-cyan-500/10">
-                <div className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
-                  Monitorea en tiempo real el <span className="text-cyan-400 font-semibold relative">
-                    rendimiento y crecimiento del ecosistema
-                    <div className="absolute inset-0 bg-cyan-400/20 blur-sm -z-10"></div>
-                  </span> TicketSafer. 
-                  Estadísticas en vivo, visualizaciones de red y paneles de control avanzados.
-                </div>
+                                 <div className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
+                   Monitorea en tiempo real el <span className="text-cyan-400 font-semibold relative">
+                     rendimiento y crecimiento del ecosistema
+                     <span className="absolute inset-0 bg-cyan-400/20 blur-sm -z-10"></span>
+                   </span> TicketSafer. 
+                   Estadísticas en vivo, visualizaciones de red y paneles de control avanzados.
+                 </div>
               </div>
             </motion.div>
           </motion.div>
