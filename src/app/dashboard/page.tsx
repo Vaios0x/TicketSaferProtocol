@@ -92,13 +92,13 @@ export default function DashboardPage() {
                 <span className="gradient-text relative">
                   Dashboard del
                   {/* Neural glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 blur-2xl opacity-30 animate-pulse"></div>
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 blur-2xl opacity-30 animate-pulse"></span>
                 </span>
                 <br />
                 <span className="text-white relative">
                   Protocolo
                   {/* Subtle glow */}
-                  <div className="absolute inset-0 bg-white/10 blur-xl opacity-20"></div>
+                  <span className="absolute inset-0 bg-white/10 blur-xl opacity-20"></span>
                 </span>
               </h1>
               
