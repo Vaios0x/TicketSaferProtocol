@@ -7,7 +7,7 @@ import { ConnectButton } from '@/components/ui/ConnectButton';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('features');
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +19,9 @@ export function Header() {
   }, []);
 
   const navigationItems = [
+    { name: 'Inicio', href: '/', id: 'home' },
     { name: 'Características', href: '#features', id: 'features' },
-    { name: 'Dashboard', href: '#dashboard', id: 'dashboard' },
+    { name: 'Dashboard', href: '/dashboard', id: 'dashboard' },
     { name: 'Roadmap', href: '/roadmap', id: 'roadmap' },
     { name: 'Documentación', href: '#docs', id: 'docs' },
   ];
