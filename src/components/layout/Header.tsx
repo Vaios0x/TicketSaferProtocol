@@ -19,10 +19,10 @@ export function Header() {
   }, []);
 
   const navigationItems = [
-    { name: 'Inicio', href: '#home', id: 'home' },
+    { name: 'Inicio', href: '/', id: 'home' },
     { name: 'Características', href: '#features', id: 'features' },
     { name: 'Dashboard', href: '#dashboard', id: 'dashboard' },
-    { name: 'Roadmap', href: '#roadmap', id: 'roadmap' },
+    { name: 'Roadmap', href: '/roadmap', id: 'roadmap' },
     { name: 'Documentación', href: '#docs', id: 'docs' },
   ];
 

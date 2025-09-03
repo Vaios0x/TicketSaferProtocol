@@ -9,7 +9,6 @@ import { LiquidityPanel } from '@/components/defi/LiquidityPanel';
 import { GovernancePanel } from '@/components/governance/GovernancePanel';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { FeaturesSection } from '@/components/features/FeaturesSection';
-import { RoadmapSection } from '@/components/roadmap/RoadmapSection';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -86,9 +85,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
-      {/* Roadmap Section */}
-      <RoadmapSection />
     </div>
   );
 }
