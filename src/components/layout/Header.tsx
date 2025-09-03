@@ -46,31 +46,31 @@ export function Header() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo with Neural Glow */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 sm:space-x-3 group"
           >
             <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40 transition-all duration-300 group-hover:scale-110">
-                <span className="text-white font-bold text-lg lg:text-xl">🎫</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40 transition-all duration-300 group-hover:scale-110">
+                <span className="text-white font-bold text-base sm:text-lg lg:text-xl">🎫</span>
               </div>
               {/* Neural glow effect */}
-              <div className="absolute inset-0 w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl blur-xl opacity-50 group-hover:opacity-70 transition-all duration-300 -z-10"></div>
+              <div className="absolute inset-0 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl blur-xl opacity-50 group-hover:opacity-70 transition-all duration-300 -z-10"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 TicketSafer
               </span>
-              <span className="text-xs text-cyan-400/70 font-mono">Protocol v1.0</span>
+              <span className="text-xs text-cyan-400/70 font-mono hidden sm:block">Protocol v1.0</span>
             </div>
           </motion.div>
 
           {/* Desktop Navigation with Glassmorphism */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -82,7 +82,7 @@ export function Header() {
                 <a
                   href={item.href}
                   onClick={() => setActiveSection(item.id)}
-                  className={`relative px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  className={`relative px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm md:text-base ${
                     activeSection === item.id
                       ? 'text-white bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
@@ -112,7 +112,7 @@ export function Header() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:block relative"
+            className="hidden md:block relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl blur-xl"></div>
             <ConnectButton />
@@ -124,7 +124,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative p-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
+            className="md:hidden relative p-2 sm:p-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
             aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMobileMenuOpen}
           >
@@ -164,12 +164,12 @@ export function Header() {
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -20 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="lg:hidden relative"
+              className="md:hidden relative"
             >
               {/* Glassmorphism background */}
               <div className="absolute inset-0 bg-gray-900/90 backdrop-blur-xl rounded-b-2xl border-b border-l border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/10"></div>
               
-              <div className="relative z-10 py-6 px-4 space-y-4">
+              <div className="relative z-10 py-4 sm:py-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 {navigationItems.map((item, index) => (
                   <motion.a
                     key={item.name}
@@ -177,7 +177,7 @@ export function Header() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    className={`block px-3 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm sm:text-base ${
                       activeSection === item.id
                         ? 'text-white bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30'
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
@@ -193,7 +193,7 @@ export function Header() {
                 ))}
                 
                 {/* Mobile Connect Button */}
-                <div className="pt-4 border-t border-cyan-500/20">
+                <div className="pt-3 sm:pt-4 border-t border-cyan-500/20">
                   <ConnectButton />
                 </div>
               </div>

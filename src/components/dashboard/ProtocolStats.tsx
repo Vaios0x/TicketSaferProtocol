@@ -101,7 +101,7 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
   }, []);
 
   return (
-    <section className="py-20 px-4 relative">
+    <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 relative">
       {/* Neural Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent"></div>
@@ -197,22 +197,22 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="text-5xl font-bold mb-6 relative">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 relative">
             <span className="gradient-text">
               Estadísticas del Protocolo
               {/* Neural glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 blur-2xl opacity-20 animate-pulse"></div>
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
             Monitorea en tiempo real el rendimiento y crecimiento del ecosistema TicketSafer
           </p>
         </motion.div>
         
         {/* Main Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
           {localStats.map((stat, index) => (
             <motion.div
               key={stat.id}
@@ -222,7 +222,7 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
               transition={{ duration: 0.6, delay: stat.delay }}
               className="group relative"
             >
-              <div className="glassmorphism-neural rounded-2xl p-6 h-full hover:scale-105 transition-all duration-300 border border-white/10 hover:border-cyan-400/30 relative overflow-hidden">
+              <div className="glassmorphism-neural rounded-2xl p-4 sm:p-6 h-full hover:scale-105 transition-all duration-300 border border-white/10 hover:border-cyan-400/30 relative overflow-hidden">
                 {/* Neural glow background */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${stat.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
                 
@@ -231,18 +231,18 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
                 <div className={`absolute bottom-3 left-3 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 animate-float transition-opacity duration-300`} style={{ animationDelay: '1s' }}></div>
                 
                 {/* Icon container with neural glow */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${stat.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 relative shadow-lg shadow-${stat.glow}-500/25`}>
-                  <span className="text-3xl relative z-10">{stat.icon}</span>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${stat.gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 relative shadow-lg shadow-${stat.glow}-500/25`}>
+                  <span className="text-2xl sm:text-3xl relative z-10">{stat.icon}</span>
                   {/* Neural glow effect */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${stat.gradient} rounded-2xl blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300`}></div>
                 </div>
                 
-                <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300 text-center">
+                <h3 className="text-base sm:text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300 text-center">
                   {stat.title}
                 </h3>
                 
                 {/* Primary value with neural glow */}
-                <div className={`text-3xl md:text-4xl font-bold text-${stat.color}-400 mb-2 relative text-center`}>
+                <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-${stat.color}-400 mb-2 relative text-center`}>
                   {stat.primaryValue}
                   {/* Neural glow */}
                   <div className={`absolute inset-0 text-${stat.color}-400 blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-300`}>
@@ -251,7 +251,7 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
                 </div>
                 
                 {/* Secondary value (percentage change) */}
-                <div className={`text-lg font-semibold text-${stat.color}-400 text-center group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`text-base sm:text-lg font-semibold text-${stat.color}-400 text-center group-hover:scale-110 transition-transform duration-300`}>
                   {stat.secondaryValue}
                 </div>
                 
@@ -272,7 +272,7 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           {[
             {
@@ -308,22 +308,22 @@ export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               className="group relative"
             >
-              <div className="glassmorphism-neural rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
+              <div className="glassmorphism-neural rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
                 {/* Neural glow background */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${stat.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-15 transition-opacity duration-300 -z-10`}></div>
                 
                 {/* Floating neural particles */}
                 <div className={`absolute top-2 right-2 w-1 h-1 bg-${stat.color}-400 rounded-full opacity-0 group-hover:opacity-100 animate-float transition-opacity duration-300`}></div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${stat.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-${stat.color}-500/25`}>
-                    <span className="text-2xl">{stat.icon}</span>
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${stat.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-${stat.color}-500/25`}>
+                    <span className="text-xl sm:text-2xl">{stat.icon}</span>
                   </div>
                   
                   <div className="flex-1">
-                    <h4 className="text-sm text-gray-400 mb-1">{stat.title}</h4>
-                    <div className="text-xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className={`text-sm font-semibold text-${stat.color}-400`}>{stat.change}</div>
+                    <h4 className="text-xs sm:text-sm text-gray-400 mb-1">{stat.title}</h4>
+                    <div className="text-lg sm:text-xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className={`text-xs sm:text-sm font-semibold text-${stat.color}-400`}>{stat.change}</div>
                   </div>
                 </div>
               </div>

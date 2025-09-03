@@ -58,14 +58,14 @@ export default function HomePage() {
       <FeaturesSection />
       
       {/* Protocol Dashboard */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4">
         <div className="container mx-auto">
           <motion.h2 
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-5xl font-bold text-center mb-16"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16"
           >
             <span className="gradient-text">Dashboard del Protocolo</span>
           </motion.h2>
@@ -74,12 +74,12 @@ export default function HomePage() {
           <ProtocolStats stats={protocolStats} />
           
           {/* Network Visualization */}
-          <div className="my-20">
+          <div className="my-12 sm:my-16 lg:my-20">
             <NetworkVisualization />
           </div>
           
           {/* Main Panels Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
             <StakingPanel />
             <LiquidityPanel />
             <GovernancePanel />

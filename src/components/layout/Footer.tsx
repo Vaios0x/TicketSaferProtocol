@@ -160,40 +160,40 @@ export function Footer() {
         <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-float opacity-40" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Logo Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="sm:col-span-2 lg:col-span-2"
           >
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
-                  <span className="text-white font-bold text-xl">🎫</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                  <span className="text-white font-bold text-lg sm:text-xl">🎫</span>
                 </div>
                 {/* Neural glow effect */}
-                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl blur-xl opacity-30"></div>
+                <div className="absolute inset-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl blur-xl opacity-30"></div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
                   TicketSafer
                 </h3>
-                <p className="text-sm text-cyan-400/70 font-mono">Protocol v1.0</p>
+                <p className="text-xs sm:text-sm text-cyan-400/70 font-mono">Protocol v1.0</p>
               </div>
             </div>
             
-            <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
+            <p className="text-gray-400 mb-4 sm:mb-6 leading-relaxed max-w-md text-sm sm:text-base">
               El protocolo fundamental que toda la industria del entretenimiento usa para tickets, 
               pagos y verificación con tecnología Web3 de vanguardia.
             </p>
             
             {/* Social Links with Neural Effects */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -203,13 +203,13 @@ export function Footer() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
-                  className={`relative group w-10 h-10 bg-gradient-to-r from-${social.color}-500/20 to-${social.color}-600/20 rounded-xl flex items-center justify-center border border-${social.color}-400/30 hover:border-${social.color}-400/50 transition-all duration-300 backdrop-blur-sm`}
+                  className={`relative group w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-${social.color}-500/20 to-${social.color}-600/20 rounded-xl flex items-center justify-center border border-${social.color}-400/30 hover:border-${social.color}-400/50 transition-all duration-300 backdrop-blur-sm`}
                   aria-label={`Seguir en ${social.name}`}
                 >
                   {/* Neural glow effect */}
                   <div className={`absolute inset-0 bg-gradient-to-r from-${social.color}-500/20 to-${social.color}-600/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
                   
-                  <span className="text-lg relative z-10">{social.icon}</span>
+                  <span className="text-base sm:text-lg relative z-10">{social.icon}</span>
                   
                   {/* Floating neural particles */}
                   <div className={`absolute -top-1 -right-1 w-1 h-1 bg-${social.color}-400 rounded-full opacity-0 group-hover:opacity-100 animate-float transition-opacity duration-300`}></div>
@@ -264,7 +264,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="glassmorphism-neural rounded-2xl p-8 mb-12 border border-cyan-400/20 relative overflow-hidden"
+          className="glassmorphism-neural rounded-2xl p-4 sm:p-6 lg:p-8 mb-8 sm:mb-12 border border-cyan-400/20 relative overflow-hidden"
         >
           {/* Neural glow background */}
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -274,24 +274,24 @@ export function Footer() {
           <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float opacity-60" style={{ animationDelay: '1s' }}></div>
           
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
               Mantente Actualizado
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
               Recibe las últimas noticias sobre el protocolo, actualizaciones y eventos exclusivos.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="tu@email.com"
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 backdrop-blur-sm transition-all duration-300"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base"
                 aria-label="Email para newsletter"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative group px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-white font-semibold rounded-xl transition-all duration-300 border border-cyan-400/30 hover:border-cyan-400/50 backdrop-blur-sm shadow-lg shadow-cyan-500/25"
+                className="relative group px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-white font-semibold rounded-xl transition-all duration-300 border border-cyan-400/30 hover:border-cyan-400/50 backdrop-blur-sm shadow-lg shadow-cyan-500/25 text-sm sm:text-base"
                 aria-label="Suscribirse al newsletter"
               >
                 {/* Neural glow effect */}
@@ -312,14 +312,14 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="pt-8 border-t border-gray-700/50"
+          className="pt-6 sm:pt-8 border-t border-gray-700/50"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
               © {currentYear} TicketSafer Protocol. Todos los derechos reservados.
             </div>
             
-            <div className="flex items-center space-x-6 text-sm">
+            <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm">
               <a href="#privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                 Privacidad
               </a>

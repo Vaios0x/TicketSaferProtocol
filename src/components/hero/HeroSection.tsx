@@ -316,10 +316,10 @@ export function HeroSection() {
         </div>
         
         {/* Network Activity Indicator */}
-        <div className="absolute top-4 right-4 bg-gray-900/80 backdrop-blur-sm rounded-lg p-3 border border-cyan-400/30">
+        <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-gray-900/80 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-cyan-400/30">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-            <span className="text-cyan-400 text-sm font-mono">Network Activity: {Math.round(networkActivity)}%</span>
+            <span className="text-cyan-400 text-xs sm:text-sm font-mono">Network: {Math.round(networkActivity)}%</span>
           </div>
           <div className="w-full bg-gray-700 rounded-full h-1 mt-2">
             <div 
@@ -352,16 +352,16 @@ export function HeroSection() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
+      <div className="relative z-10 text-center px-3 sm:px-4 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
           {/* Main Title with Neural Glow */}
-          <div className="relative mb-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <div className="relative mb-6 sm:mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="gradient-text relative">
                 TicketSafer
                 {/* Neural glow effect */}
@@ -386,10 +386,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative mb-12"
+            className="relative mb-8 sm:mb-12"
           >
-            <div className="glassmorphism-neural rounded-3xl p-8 border border-cyan-400/20 shadow-2xl shadow-cyan-500/10">
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <div className="glassmorphism-neural rounded-3xl p-4 sm:p-6 lg:p-8 border border-cyan-400/20 shadow-2xl shadow-cyan-500/10">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
                 El <span className="text-cyan-400 font-semibold relative">
                   AWS del Entertainment Web3
                   <div className="absolute inset-0 bg-cyan-400/20 blur-sm -z-10"></div>
@@ -405,7 +405,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16"
           >
             <div className="relative group">
               <ConnectButton />
@@ -416,7 +416,7 @@ export function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative group px-8 py-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-white font-semibold rounded-xl transition-all duration-300 border border-purple-400/30 hover:border-purple-400/50 backdrop-blur-sm shadow-lg shadow-purple-500/25"
+              className="relative group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-white font-semibold rounded-xl transition-all duration-300 border border-purple-400/30 hover:border-purple-400/50 backdrop-blur-sm shadow-lg shadow-purple-500/25 text-sm sm:text-base"
             >
               {/* Neural glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -433,7 +433,7 @@ export function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative group px-8 py-4 bg-gradient-to-r from-transparent to-transparent hover:from-white/10 hover:to-white/5 text-white font-semibold rounded-xl transition-all duration-300 border-2 border-cyan-400/50 hover:border-cyan-400/80 backdrop-blur-sm"
+              className="relative group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-transparent to-transparent hover:from-white/10 hover:to-white/5 text-white font-semibold rounded-xl transition-all duration-300 border-2 border-cyan-400/50 hover:border-cyan-400/80 backdrop-blur-sm text-sm sm:text-base"
             >
               {/* Neural glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -454,7 +454,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12 sm:mb-16 px-3 sm:px-4"
         >
           {[
             {
@@ -493,19 +493,19 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 1.2 + index * 0.1 }}
               className="group relative"
             >
-              <div className="glassmorphism-neural rounded-2xl p-6 h-full hover:scale-105 transition-all duration-300 border border-white/10 hover:border-cyan-400/30">
+              <div className="glassmorphism-neural rounded-2xl p-4 sm:p-6 h-full hover:scale-105 transition-all duration-300 border border-white/10 hover:border-cyan-400/30">
                 {/* Neural glow background */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${feature.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
                 
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-${feature.glow}-500/25`}>
-                  <span className="text-2xl">{feature.icon}</span>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-${feature.glow}-500/25`}>
+                  <span className="text-xl sm:text-2xl">{feature.icon}</span>
                 </div>
                 
-                <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                   {feature.description}
                 </p>
                 
@@ -522,7 +522,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-3 sm:px-4"
         >
           {[
             { value: '100M+', label: 'Tickets Procesados', color: 'cyan' },
@@ -537,15 +537,15 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
               className="text-center group"
             >
-              <div className="glassmorphism-neural rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className={`text-3xl md:text-4xl font-bold text-${stat.color}-400 mb-2 relative`}>
+              <div className="glassmorphism-neural rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
+                <div className={`text-2xl sm:text-3xl md:text-4xl font-bold text-${stat.color}-400 mb-2 relative`}>
                   {stat.value}
                   {/* Neural glow */}
                   <div className={`absolute inset-0 text-${stat.color}-400 blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-300`}>
                     {stat.value}
                   </div>
                 </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
+                <div className="text-gray-400 text-xs sm:text-sm">{stat.label}</div>
                 
                 {/* Floating neural particles */}
                 <div className={`absolute top-2 right-2 w-1 h-1 bg-${stat.color}-400 rounded-full opacity-0 group-hover:opacity-100 animate-float transition-opacity duration-300`}></div>
@@ -560,7 +560,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="relative">
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center backdrop-blur-sm">
