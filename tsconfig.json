@@ -32,8 +32,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -41,6 +41,10 @@
     "dist",
     "build",
     ".next",
-    "out"
+    "out",
+    "contracts",
+    "scripts",
+    "hardhat.config.ts",
+    "hardhat.config.js"
   ]
 }

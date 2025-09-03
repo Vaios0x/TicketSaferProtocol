@@ -15,13 +15,23 @@ interface StatCard {
   delay: number;
 }
 
-export function ProtocolStats() {
-  const [stats, setStats] = useState<StatCard[]>([
+interface ProtocolStatsProps {
+  stats: {
+    totalEvents: number;
+    totalTickets: number;
+    totalValueLocked: number;
+    protocolRevenue: number;
+    stakingAPY: number;
+  };
+}
+
+export function ProtocolStats({ stats: protocolStats }: ProtocolStatsProps) {
+  const [localStats, setLocalStats] = useState<StatCard[]>([
     {
       id: 'apy',
       icon: '📈',
       title: 'APY Actual',
-      primaryValue: '18.5%',
+      primaryValue: `${protocolStats.stakingAPY}%`,
       secondaryValue: '+2.3%',
       color: 'green',
       gradient: 'from-green-500 to-emerald-500',
@@ -32,7 +42,7 @@ export function ProtocolStats() {
       id: 'total-staked',
       icon: '🔒',
       title: 'Total Staked',
-      primaryValue: '$2.4M',
+      primaryValue: `$${(protocolStats.totalValueLocked / 1000000).toFixed(1)}M`,
       secondaryValue: '+12.7%',
       color: 'blue',
       gradient: 'from-blue-500 to-cyan-500',
@@ -40,10 +50,10 @@ export function ProtocolStats() {
       delay: 0.1
     },
     {
-      id: 'my-stake',
-      icon: '💎',
-      title: 'Mi Stake',
-      primaryValue: '$12,4K',
+      id: 'total-events',
+      icon: '🎫',
+      title: 'Total Eventos',
+      primaryValue: protocolStats.totalEvents.toLocaleString(),
       secondaryValue: '+8.9%',
       color: 'purple',
       gradient: 'from-purple-500 to-pink-500',
@@ -51,10 +61,10 @@ export function ProtocolStats() {
       delay: 0.2
     },
     {
-      id: 'rewards',
-      icon: '🎁',
-      title: 'Recompensas',
-      primaryValue: '$892',
+      id: 'revenue',
+      icon: '💰',
+      title: 'Ingresos',
+      primaryValue: `$${(protocolStats.protocolRevenue / 1000000).toFixed(1)}M`,
       secondaryValue: '+15.2%',
       color: 'orange',
       gradient: 'from-orange-500 to-yellow-500',
@@ -66,7 +76,7 @@ export function ProtocolStats() {
   // Simulate real-time updates
   useEffect(() => {
     const interval = setInterval(() => {
-      setStats(prevStats => 
+      setLocalStats(prevStats => 
         prevStats.map(stat => ({
           ...stat,
           primaryValue: stat.id === 'apy' 
@@ -203,7 +213,7 @@ export function ProtocolStats() {
         
         {/* Main Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {localStats.map((stat, index) => (
             <motion.div
               key={stat.id}
               initial={{ y: 50, opacity: 0 }}
